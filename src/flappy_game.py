@@ -80,6 +80,7 @@ def game_loop():
     pipes = [Pipe(400)]
     running = True
     score = 0
+    paused = False  # New variable to track pause state
 
     while running:
         screen.blit(bg_img, (0, 0))
@@ -90,30 +91,45 @@ def game_loop():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
                     bird.flap()
+                if event.key == pygame.K_p:  # Toggle pause when P key is pressed
+                    paused = not paused
 
-        bird.update()
+        # Only update game state if not paused
+        if not paused:
+            bird.update()
+            
+            for pipe in pipes:
+                pipe.move()
+                
+                if pipe.x < -PIPE_WIDTH:
+                    pipes.remove(pipe)
+                    pipes.append(Pipe(400))
+                    score += 1
+
+                if bird.rect.colliderect(pipe.top_rect) or bird.rect.colliderect(pipe.bottom_rect):
+                    running = False
+
+            # Update Best Score
+            if score > best_score:
+                best_score = score
+        
+        # Draw elements (should happen whether paused or not)
         screen.blit(bird_img, (bird.x, bird.y))
-
+        
         for pipe in pipes:
-            pipe.move()
             pipe.draw(screen)
-
-            if pipe.x < -PIPE_WIDTH:
-                pipes.remove(pipe)
-                pipes.append(Pipe(400))
-                score += 1
-
-            if bird.rect.colliderect(pipe.top_rect) or bird.rect.colliderect(pipe.bottom_rect):
-                running = False
-
-        # Update Best Score
-        if score > best_score:
-            best_score = score
 
         # Display Scoreboard
         font = pygame.font.Font(None, 36)
         score_text = font.render(f"Score: {score}  Best: {best_score}", True, WHITE)
         screen.blit(score_text, (10, 10))
+        
+        # Display pause message when paused
+        if paused:
+            pause_font = pygame.font.Font(None, 72)
+            pause_text = pause_font.render("PAUSED", True, WHITE)
+            screen.blit(pause_text, (SCREEN_WIDTH // 2 - pause_text.get_width() // 2, 
+                                    SCREEN_HEIGHT // 2 - pause_text.get_height() // 2))
 
         pygame.display.flip()
         clock.tick(30)
