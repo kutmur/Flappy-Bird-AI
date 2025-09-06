@@ -1,6 +1,6 @@
 # Flappy Bird AI 
 
-## 🎮 Overview  
+## Overview  
 This project is an **AI-powered Flappy Bird** game where you can **play manually** or let an AI agent **learn and play** using **Reinforcement Learning (Deep Q-Learning / PPO).** The AI continuously improves its gameplay through training.  
 
 ## 🚀 Features  
