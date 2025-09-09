@@ -4,13 +4,13 @@
 This project is an **AI-powered Flappy Bird** game where you can **play manually** or let an AI agent **learn and play** using **Reinforcement Learning (Deep Q-Learning / PPO).** The AI continuously improves its gameplay through training.  
 
 ## Features  
--  **Play Manually** – Control the bird using the spacebar 🕹️  
--  **AI Mode** – The AI learns & plays Flappy Bird automatically 🤖  
--  **Scoreboard** – Displays current and best scores 🏆  
+-  **Play Manually** – Control the bird using the spacebar 
+-  **AI Mode** – The AI learns & plays Flappy Bird automatically 
+-  **Scoreboard** – Displays current and best scores 
 -  **Main Menu** – Choose to play manually, watch AI, or quit  
 -  **Reinforcement Learning** – AI trains using **Stable-Baselines3 (PPO)**  
 
-## 🧠 AI Training  
+## AI Training  
 - The AI is trained using **PPO (Proximal Policy Optimization)** with a custom Flappy Bird environment.  
 - The training process **rewards survival** and **penalizes crashing.**  
 - After **training for thousands of timesteps**, the AI learns to navigate through pipes.  
