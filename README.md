@@ -15,7 +15,7 @@ This project is an **AI-powered Flappy Bird** game where you can **play manually
 - The training process **rewards survival** and **penalizes crashing.**  
 - After **training for thousands of timesteps**, the AI learns to navigate through pipes.  
 
-## 📂 Project Structure  
+## Project Structure  
 ```
 Flappy-Bird-AI/
 │── assets/          # Game assets (bird, pipes, background)
@@ -28,7 +28,7 @@ Flappy-Bird-AI/
 │── requirements.txt # Dependencies
 ```
 
-## 🛠 Installation  
+## Installation  
 Clone the repository and install dependencies:  
 ```bash
 git clone https://github.com/EXPERT2007/Flappy-Bird-AI.git
