@@ -46,7 +46,7 @@ python src/main.py
 - **Press 2** → Let the AI play  
 - **Press Q** → Quit  
 
-## 🏅 Train AI  
+## Train AI  
 If you want to train the AI from scratch, run:  
 ```bash
 python src/train_ai.py
