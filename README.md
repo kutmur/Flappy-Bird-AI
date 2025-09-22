@@ -36,7 +36,7 @@ cd Flappy-Bird-AI
 pip install -r requirements.txt
 ```
 
-## 🎮 How to Play  
+## How to Play  
 Run the main game file:  
 ```bash
 python src/main.py
