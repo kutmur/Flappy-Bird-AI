@@ -53,7 +53,7 @@ python src/train_ai.py
 ```
 This will generate a trained model in the `models/` folder.  
 
-## 🔥 AI Performance  
+## AI Performance  
 - ✅ AI learns through **Deep Reinforcement Learning**  
 - ✅ The model improves as training continues  
 - ✅ You can train longer for a smarter AI  
