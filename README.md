@@ -58,7 +58,7 @@ This will generate a trained model in the `models/` folder.
 - The model improves as training continues  
 - You can train longer for a smarter AI  
 
-## ⚡ Future Improvements  
+## Future Improvements  
 - 🚀 Enhancing AI intelligence  
 - 📊 Adding difficulty levels  
 - 🎨 Improving visuals  
