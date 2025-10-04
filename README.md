@@ -59,10 +59,10 @@ This will generate a trained model in the `models/` folder.
 - You can train longer for a smarter AI  
 
 ## Future Improvements  
-- 🚀 Enhancing AI intelligence  
-- 📊 Adding difficulty levels  
-- 🎨 Improving visuals  
-- 🎵 Adding sound effects  
+- Enhancing AI intelligence  
+- Adding difficulty levels  
+- Improving visuals  
+- Adding sound effects  
 
 ## 🤝 Contributions  
 Feel free to fork this repo, improve the AI, and submit pull requests!  
